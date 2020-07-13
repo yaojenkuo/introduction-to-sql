@@ -14395,8 +14395,8 @@ a.anchor-link {
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sql_query</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
-<span class="s2">SELECT typeof(points) AS points_df,</span>
-<span class="s2">       typeof(ppg) AS ppg_df</span>
+<span class="s2">SELECT typeof(points) AS points_dt,</span>
+<span class="s2">       typeof(ppg) AS ppg_dt</span>
 <span class="s2">  FROM careerSummaries</span>
 <span class="s2"> LIMIT 1;</span>
 <span class="s2">&quot;&quot;&quot;</span>
@@ -14436,8 +14436,8 @@ a.anchor-link {
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>points_df</th>
-      <th>ppg_df</th>
+      <th>points_dt</th>
+      <th>ppg_dt</th>
     </tr>
   </thead>
   <tbody>
@@ -14474,6 +14474,81 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#20351;&#29992;-CAST(column_name-AS-data_type)-&#22312;&#26597;&#35426;&#26178;&#36681;&#25563;&#27396;&#20301;&#30340;&#36039;&#26009;&#22411;&#24907;">&#20351;&#29992; <code>CAST(column_name AS data_type)</code> &#22312;&#26597;&#35426;&#26178;&#36681;&#25563;&#27396;&#20301;&#30340;&#36039;&#26009;&#22411;&#24907;<a class="anchor-link" href="#&#20351;&#29992;-CAST(column_name-AS-data_type)-&#22312;&#26597;&#35426;&#26178;&#36681;&#25563;&#27396;&#20301;&#30340;&#36039;&#26009;&#22411;&#24907;">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sql_query</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">SELECT typeof(points) AS points_int,</span>
+<span class="s2">       typeof(CAST(points AS REAL)) AS points_real</span>
+<span class="s2">  FROM careerSummaries</span>
+<span class="s2"> LIMIT 1;</span>
+<span class="s2">&quot;&quot;&quot;</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">read_sql</span><span class="p">(</span><span class="n">sql_query</span><span class="p">,</span> <span class="n">conn</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[11]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>points_int</th>
+      <th>points_real</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>integer</td>
+      <td>real</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="&#26597;&#35426;&#29305;&#23450;&#36039;&#26009;&#24235;&#31995;&#32113;&#30340;&#36039;&#26009;&#22411;&#24907;">&#26597;&#35426;&#29305;&#23450;&#36039;&#26009;&#24235;&#31995;&#32113;&#30340;&#36039;&#26009;&#22411;&#24907;<a class="anchor-link" href="#&#26597;&#35426;&#29305;&#23450;&#36039;&#26009;&#24235;&#31995;&#32113;&#30340;&#36039;&#26009;&#22411;&#24907;">&#182;</a></h2><p><a href="https://www.sqlite.org/datatype3.html">https://www.sqlite.org/datatype3.html</a></p>
 <p>Source: <a href="https://www.sqlite.org/">https://www.sqlite.org/</a></p>
 
@@ -14493,7 +14568,7 @@ a.anchor-link {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sql_query</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
@@ -14509,7 +14584,7 @@ a.anchor-link {
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">read_sql</span><span class="p">(</span><span class="n">sql_query</span><span class="p">,</span> <span class="n">conn</span><span class="p">)</span>
@@ -14525,7 +14600,7 @@ a.anchor-link {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[12]:</div>
+    <div class="prompt output_prompt">Out[13]:</div>
 
 
 
@@ -14632,7 +14707,7 @@ BMI = \frac{weight_{kg}}{height_m^{2}}
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sql_query</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
@@ -14651,7 +14726,7 @@ BMI = \frac{weight_{kg}}{height_m^{2}}
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">read_sql</span><span class="p">(</span><span class="n">sql_query</span><span class="p">,</span> <span class="n">conn</span><span class="p">)</span>
@@ -14667,7 +14742,7 @@ BMI = \frac{weight_{kg}}{height_m^{2}}
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[14]:</div>
+    <div class="prompt output_prompt">Out[15]:</div>
 
 
 
@@ -14796,7 +14871,7 @@ BMI = \frac{weight_{kg}}{height_m^{2}}
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sql_query</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
@@ -14814,7 +14889,7 @@ BMI = \frac{weight_{kg}}{height_m^{2}}
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">read_sql</span><span class="p">(</span><span class="n">sql_query</span><span class="p">,</span> <span class="n">conn</span><span class="p">)</span>
@@ -14830,7 +14905,7 @@ BMI = \frac{weight_{kg}}{height_m^{2}}
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[16]:</div>
+    <div class="prompt output_prompt">Out[17]:</div>
 
 
 
@@ -14927,7 +15002,7 @@ BMI = \frac{weight_{kg}}{height_m^{2}}
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sql_query</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
@@ -14949,7 +15024,7 @@ BMI = \frac{weight_{kg}}{height_m^{2}}
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[17]:</div>
+    <div class="prompt output_prompt">Out[18]:</div>
 
 
 
@@ -15053,7 +15128,7 @@ BMI = \frac{weight_{kg}}{height_m^{2}}
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sql_query</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
@@ -15073,7 +15148,7 @@ BMI = \frac{weight_{kg}}{height_m^{2}}
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">read_sql</span><span class="p">(</span><span class="n">sql_query</span><span class="p">,</span> <span class="n">conn</span><span class="p">)</span>
@@ -15089,7 +15164,7 @@ BMI = \frac{weight_{kg}}{height_m^{2}}
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[19]:</div>
+    <div class="prompt output_prompt">Out[20]:</div>
 
 
 
@@ -15205,7 +15280,7 @@ BMI = \frac{weight_{kg}}{height_m^{2}}
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sql_query</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
@@ -15222,7 +15297,7 @@ BMI = \frac{weight_{kg}}{height_m^{2}}
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">read_sql</span><span class="p">(</span><span class="n">sql_query</span><span class="p">,</span> <span class="n">conn</span><span class="p">)</span>
@@ -15238,7 +15313,7 @@ BMI = \frac{weight_{kg}}{height_m^{2}}
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[21]:</div>
+    <div class="prompt output_prompt">Out[22]:</div>
 
 
 
@@ -15354,7 +15429,7 @@ BMI = \frac{weight_{kg}}{height_m^{2}}
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 不等於</span>
@@ -15376,7 +15451,7 @@ BMI = \frac{weight_{kg}}{height_m^{2}}
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[22]:</div>
+    <div class="prompt output_prompt">Out[23]:</div>
 
 
 
@@ -15476,7 +15551,7 @@ BMI = \frac{weight_{kg}}{height_m^{2}}
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 大於等於</span>
@@ -15496,7 +15571,7 @@ BMI = \frac{weight_{kg}}{height_m^{2}}
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[23]:</div>
+    <div class="prompt output_prompt">Out[24]:</div>
 
 
 
@@ -15552,7 +15627,7 @@ BMI = \frac{weight_{kg}}{height_m^{2}}
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 介於一個範圍</span>
@@ -15572,7 +15647,7 @@ BMI = \frac{weight_{kg}}{height_m^{2}}
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[24]:</div>
+    <div class="prompt output_prompt">Out[25]:</div>
 
 
 
@@ -15703,7 +15778,7 @@ BMI = \frac{weight_{kg}}{height_m^{2}}
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 屬於集合中的值</span>
@@ -15723,7 +15798,7 @@ BMI = \frac{weight_{kg}}{height_m^{2}}
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[25]:</div>
+    <div class="prompt output_prompt">Out[26]:</div>
 
 
 
@@ -15803,7 +15878,7 @@ BMI = \frac{weight_{kg}}{height_m^{2}}
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 模糊比對 %</span>
@@ -15823,7 +15898,7 @@ BMI = \frac{weight_{kg}}{height_m^{2}}
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[26]:</div>
+    <div class="prompt output_prompt">Out[27]:</div>
 
 
 
@@ -15939,7 +16014,7 @@ BMI = \frac{weight_{kg}}{height_m^{2}}
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 模糊比對 _</span>
@@ -15959,7 +16034,7 @@ BMI = \frac{weight_{kg}}{height_m^{2}}
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[27]:</div>
+    <div class="prompt output_prompt">Out[28]:</div>
 
 
 
@@ -16020,7 +16095,7 @@ BMI = \frac{weight_{kg}}{height_m^{2}}
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 非</span>
@@ -16040,7 +16115,7 @@ BMI = \frac{weight_{kg}}{height_m^{2}}
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[28]:</div>
+    <div class="prompt output_prompt">Out[29]:</div>
 
 
 
@@ -16171,7 +16246,7 @@ BMI = \frac{weight_{kg}}{height_m^{2}}
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sql_query</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
@@ -16190,7 +16265,7 @@ BMI = \frac{weight_{kg}}{height_m^{2}}
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[29]:</div>
+    <div class="prompt output_prompt">Out[30]:</div>
 
 
 
@@ -16236,7 +16311,7 @@ BMI = \frac{weight_{kg}}{height_m^{2}}
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sql_query</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
@@ -16255,7 +16330,7 @@ BMI = \frac{weight_{kg}}{height_m^{2}}
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[30]:</div>
+    <div class="prompt output_prompt">Out[31]:</div>
 
 
 
@@ -16478,12 +16553,20 @@ BMI = \frac{weight_{kg}}{height_m^{2}}
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="&#36889;&#26159;&#30446;&#21069;&#28085;&#33995;&#30340;&#26597;&#35426;&#20445;&#30041;&#23383;">&#36889;&#26159;&#30446;&#21069;&#28085;&#33995;&#30340;&#26597;&#35426;&#20445;&#30041;&#23383;<a class="anchor-link" href="#&#36889;&#26159;&#30446;&#21069;&#28085;&#33995;&#30340;&#26597;&#35426;&#20445;&#30041;&#23383;">&#182;</a></h2><p>使用 SQL 語法時，保留字順序必須要遵守。</p>
-<div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="k">DISTINCT</span> <span class="k">column_name</span> <span class="k">AS</span> <span class="n">alias_name</span>
+<div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="k">DISTINCT</span> <span class="k">CAST</span><span class="p">(</span><span class="k">column_name</span> <span class="k">AS</span> <span class="n">data_type</span><span class="p">)</span> <span class="k">AS</span> <span class="n">alias_name</span>
   <span class="k">FROM</span> <span class="k">table_name</span>
  <span class="k">WHERE</span> <span class="n">conditions</span>
  <span class="k">ORDER</span> <span class="k">BY</span> <span class="k">column_name</span>
  <span class="k">LIMIT</span> <span class="n">n_obs</span> <span class="k">DESC</span><span class="p">;</span>
 </pre></div>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#21069;&#24448;&#22522;&#26412;&#26597;&#35426;&#65306;&#38568;&#22530;&#32244;&#32722;">&#21069;&#24448;&#22522;&#26412;&#26597;&#35426;&#65306;&#38568;&#22530;&#32244;&#32722;<a class="anchor-link" href="#&#21069;&#24448;&#22522;&#26412;&#26597;&#35426;&#65306;&#38568;&#22530;&#32244;&#32722;">&#182;</a></h2><p><a href="https://mybinder.org/v2/gh/yaojenkuo/introduction-to-sql/master?filepath=02-exercises.ipynb">基本查詢：隨堂練習</a></p>
 
 </div>
 </div>
