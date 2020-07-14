@@ -17929,7 +17929,7 @@ a.anchor-link {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="&#36889;&#26159;&#30446;&#21069;&#28085;&#33995;&#30340;&#26597;&#35426;&#20445;&#30041;&#23383;">&#36889;&#26159;&#30446;&#21069;&#28085;&#33995;&#30340;&#26597;&#35426;&#20445;&#30041;&#23383;<a class="anchor-link" href="#&#36889;&#26159;&#30446;&#21069;&#28085;&#33995;&#30340;&#26597;&#35426;&#20445;&#30041;&#23383;">&#182;</a></h2><p>使用 SQL 語法時，保留字順序必須要遵守。</p>
-<div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="k">DISTINCT</span> <span class="k">column_name</span> <span class="k">AS</span> <span class="n">alias_name</span>
+<div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="k">DISTINCT</span> <span class="k">CAST</span><span class="p">(</span><span class="k">column_name</span> <span class="k">AS</span> <span class="n">data_type</span><span class="p">)</span> <span class="k">AS</span> <span class="n">alias_name</span>
   <span class="k">FROM</span> <span class="k">table_name</span>
   <span class="k">JOIN</span> <span class="k">table_name</span>
     <span class="k">ON</span> <span class="k">table_name</span><span class="p">.</span><span class="n">pk</span> <span class="o">=</span> <span class="k">table_name</span><span class="p">.</span><span class="n">fk</span>
@@ -17940,6 +17940,14 @@ a.anchor-link {
  <span class="k">LIMIT</span> <span class="n">n_obs</span> <span class="k">DESC</span>
 <span class="k">UNION</span><span class="p">;</span>
 </pre></div>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#21069;&#24448;&#36039;&#26009;&#20998;&#26512;&#65306;&#38568;&#22530;&#32244;&#32722;">&#21069;&#24448;&#36039;&#26009;&#20998;&#26512;&#65306;&#38568;&#22530;&#32244;&#32722;<a class="anchor-link" href="#&#21069;&#24448;&#36039;&#26009;&#20998;&#26512;&#65306;&#38568;&#22530;&#32244;&#32722;">&#182;</a></h2><p><a href="https://mybinder.org/v2/gh/yaojenkuo/introduction-to-sql/master?filepath=03-exercises.ipynb">資料分析：隨堂練習</a></p>
 
 </div>
 </div>
