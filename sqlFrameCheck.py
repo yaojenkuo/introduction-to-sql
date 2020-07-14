@@ -19,6 +19,7 @@ class checkAnsQuery:
         if hasattr(self, '_ans'):
             try:
                 pd.testing.assert_frame_equal(self._test, self._ans)
+                print("測資比對正確！")
             except AssertionError as e:
                 print("測資比對有誤，錯誤訊息為：\n")
                 print(str(e))

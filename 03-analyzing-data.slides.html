@@ -15076,7 +15076,9 @@ a.anchor-link {
 <span class="s2"> WHERE personId IN (</span>
 <span class="s2">           SELECT personId</span>
 <span class="s2">             FROM rosters</span>
-<span class="s2">            WHERE teamId = 1610612747</span>
+<span class="s2">            WHERE teamId = (SELECT teamId</span>
+<span class="s2">                              FROM teams</span>
+<span class="s2">                             WHERE nickname = &#39;Lakers&#39;)</span>
 <span class="s2">       );</span>
 <span class="s2">&quot;&quot;&quot;</span>
 <span class="n">pd</span><span class="o">.</span><span class="n">read_sql</span><span class="p">(</span><span class="n">sql_query</span><span class="p">,</span> <span class="n">conn</span><span class="p">)</span>
