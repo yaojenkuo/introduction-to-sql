@@ -13,8 +13,8 @@
 ## 課程投影片
 
 - [快速啟動](https://yaojenkuo.io/introduction-to-sql/01-getting-started.slides.html)
-- [查詢資料](https://yaojenkuo.io/introduction-to-sql/02-retrieving-data.slides.html)
-- [分析資料](https://yaojenkuo.io/introduction-to-sql/03-analyzing-data.slides.html)
+- [基本查詢](https://yaojenkuo.io/introduction-to-sql/02-retrieving-data.slides.html)
+- [資料分析](https://yaojenkuo.io/introduction-to-sql/03-analyzing-data.slides.html)
 - [操作資料](https://yaojenkuo.io/introduction-to-sql/04-operating-data.slides.html)
 
 ## 延伸閱讀
