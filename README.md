@@ -17,6 +17,10 @@
 - [資料分析](https://yaojenkuo.io/introduction-to-sql/03-analyzing-data.slides.html)
 - [操作資料](https://yaojenkuo.io/introduction-to-sql/04-operating-data.slides.html)
 
+## 隨堂練習上傳表單
+
+<https://forms.gle/YnYGSV58t3fKLsiz6>
+
 ## 延伸閱讀
 
 - [Practical SQL](https://www.amazon.com/Practical-SQL-Beginners-Guide-Storytelling/dp/1593278276)
