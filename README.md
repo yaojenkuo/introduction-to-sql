@@ -3,6 +3,8 @@
 > Course repository of Introduction to SQL.
 >
 > https://www.sli.do #96823
+>
+> yaojenkuo@datainpoint.com
 
 ## 點選圖示啟動環境
 
