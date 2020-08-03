@@ -30,4 +30,4 @@
 
 ## 課程錄影播放清單
 
-- [330 期假日專題班，計算機及資訊網路中心 206 教室，台大資訊系統訓練班]()
+- [330 期假日專題班，計算機及資訊網路中心 206 教室，台大資訊系統訓練班](https://www.youtube.com/playlist?list=PLEq7iw5uOtuV7i3aUp10qLFmoTV79EmEd)
