@@ -16585,8 +16585,8 @@ BMI = \frac{weight_{kg}}{height_m^{2}}
 <div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="k">DISTINCT</span> <span class="k">CAST</span><span class="p">(</span><span class="k">column_name</span> <span class="k">AS</span> <span class="n">data_type</span><span class="p">)</span> <span class="k">AS</span> <span class="n">alias_name</span>
   <span class="k">FROM</span> <span class="k">table_name</span>
  <span class="k">WHERE</span> <span class="n">conditions</span>
- <span class="k">ORDER</span> <span class="k">BY</span> <span class="k">column_name</span>
- <span class="k">LIMIT</span> <span class="n">n_obs</span> <span class="k">DESC</span><span class="p">;</span>
+ <span class="k">ORDER</span> <span class="k">BY</span> <span class="k">column_name</span> <span class="k">DESC</span>
+ <span class="k">LIMIT</span> <span class="n">n_obs</span><span class="p">;</span>
 </pre></div>
 
 </div>
