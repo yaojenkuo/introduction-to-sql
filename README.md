@@ -1,4 +1,4 @@
-# Introduction to SQL | SQL 入門
+# Introduction to SQL
 
 > Course repository of Introduction to SQL.
 >
